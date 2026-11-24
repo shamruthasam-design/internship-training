@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+<body>
+
+<script>
+    console.log("Hello, World!");
+    console.log("JavaScript is working!");
+
+    var age = 20;
+    age = 30;
+    var age = 40;
+    console.log("Age is: " + age);
+
+    let name = "JavaScript";
+    name = "Python";
+    name = "C++";
+    console.log("Name is: " + name);
+
+    const pan = "kumar";
+    console.log("Pan is: " + pan);
+
+    let username = "John";
+    let password = "12345";
+
+    if (username === "John" && password === "12345") {
+        console.log("Login successful!");
+    } else {
+        console.log("Invalid credentials!");
+    }
+
+    function student(name, college = "sece") {
+        console.log("Hello, " + name + " from " + college);
+    }
+
+    student("sneha");
+    student("kumar");
+    student("priya");
+
+    function employee(name, company, college = "sece") {
+        console.log("Hello, " + name + " from " + company + " and college is " + college);
+    }
+
+    employee("Alice", "Google");
+    employee("Bob", "Microsoft");
+    employee("Charlie", "Amazon");
+
+    let data1 = function() {
+        return "hello javascript";
+    };
+
+    console.log(data1());
+
+    function display(result) {
+        console.log("Result is: " + result);
+    }
+
+    function calculate(a, b, callback) {
+        let sum = a + b;
+        callback(sum);
+    }
+
+    calculate(10, 20, display);
+
+    let data2 = (a, b) => {
+        return a * b;
+    };
+
+    console.log(data2(2, 4));
+
+    let fetch_api = new Promise((resolve, reject) => {
+        let api = true;
+
+        if (api) {
+            resolve("Data is fetched successfully");
+        } else {
+            reject("Data is not fetched");
+        }
+    });
+
+    fetch_api
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+    let order = new Promise((resolve, reject) => {
+        let orderPlaced = true;
+
+        if (orderPlaced) {
+            resolve("Order is placed successfully");
+        } else {
+            reject("Order is not placed");
+        }
+    });
+
+    order
+        .then((message) => {
+            console.log(message);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+</script>
+
+</body>
+</html>
