@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f5f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.welcome {
+  text-align: center;
+  color: blue;
+}
+
+.subtitle {
+  text-align: center;
+}
+
+/* College card */
+.data-card {
+  background-color: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Players section */
+.players-container {
+  margin-top: 30px;
+}
+
+/* Arrange cards */
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Individual player card */
+.player-card {
+  background-color: white;
+  width: 200px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-top: 4px solid blue;
+}
+
+.player-card h3 {
+  color: #1d4ed8;
+}
+
+.player-card p {
+  color: #475569;
+}

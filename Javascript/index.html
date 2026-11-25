@@ -106,7 +106,52 @@
         })
         .catch((error) => {
             console.log(error);
-        });
+        })
+
+
+        let emp = [{
+            emp_id: 100,
+            emp_name: "John",
+            salary: 50000,
+            skills: ["Python", "Java", "SQL"],
+        },
+        {
+            emp_id: 101,
+            emp_name: "Alice",
+            salary: 60000,
+            company:{
+                c1: "Google",
+                c2: "Accenture",
+            }
+        }
+    ]
+    //let copied_data = emp;
+    //copied_data.salary = 80000;
+
+    // Shallow Copy
+    let copied_data = [...emp];
+
+    copied_data[0].salary = 80000;
+    copied_data[1].company.c1 = "Amazon";
+
+    console.log("Original Data:", emp);
+    console.log("Shallow Copy:", copied_data);
+
+
+    // Deep Copy
+    let deep_copy_data = JSON.parse(JSON.stringify(emp));
+
+    deep_copy_data[1].company.c1 = "Microsoft";
+
+    console.log("Original Data:", emp);
+    console.log("Deep Copy:", deep_copy_data);
+
+    //object to string 
+    let stringyfy_data = JSON.stringify(emp);
+    console.log(stringyfy_data);
+    //string to object
+    let parse_data = JSON.parse(stringyfy_data);
+    console.log(parse_data[0].emp_name);
 
 </script>
 
