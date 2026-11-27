@@ -112,10 +112,13 @@ function App() {
 export default App;
 */
 
-import React from "react";
+/*import React from "react";
 import Flipkart from "./Components/Flipkart";
 import { MobileContext } from "./Components/MobileContext";
 import User from "./Hooks/UserEffect/User";
+import Fetch_API from "./Components/Fetch_API";
+import Registration from "./Components/Registration";
+
 
 function App() {
 
@@ -127,16 +130,41 @@ function App() {
 
   return (
     <>
-    <center>
-      <h1>Welcome to App Component</h1>
-    </center>
-      
 
-      <MobileContext.Provider value={mobileData}>
+      {/*<MobileContext.Provider value={mobileData}>
       <Flipkart />
       </MobileContext.Provider>
       <User />
+      <hr />
+      <Fetch_API />*/
+      /*<Registration />
 
+    </>
+  );
+}
+
+export default App;
+*/
+import "./App.css";
+import React from "react";
+import Registration from "./Components/Registration";
+import Navbar from "./Components/Navbar";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+      <Navbar />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
